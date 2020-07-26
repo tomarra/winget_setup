@@ -1,9 +1,9 @@
+# Package ID's
+
 $basicsIds = @(
-    "Microsoft.Edge",
+    "Microsoft.Edge"
     "Spotify.Spotify",
-    "SlackTechnologies.Slack",
-    "AgileBits.1Password",
-    "Telegram.TelegramDesktop"
+    "SlackTechnologies.Slack"
 )
 
 $developmentToolsIds = @(
@@ -13,12 +13,26 @@ $developmentToolsIds = @(
 )
 
 $gamesIds = @(
-    "Valve.Steam",
-    "Discord.Discord"
+    "Valve.Steam"
 )
 
-$masterIdList = $basicsIds + $developmentToolsIds + $gamesIds
+$visualStudioCodeExtensionIds = @(
+    "ginfuru.ginfuru-vscode-jekyll-syntax",
+    "ms-vscode.powershell",
+    "streetsidesoftware.code-spell-checker",
+    "yzhang.markdown-all-in-one"
+)
 
+# Application Install 
+
+$masterIdList = $basicsIds + $developmentToolsIds + $gamesIds
 foreach ($id in $masterIdList) {
     winget install --id $id -e
 }
+
+# Extension Configuration
+
+foreach ($id in $visualStudioCodeExtensionIds) {
+    code --install-extension $id
+}
+
