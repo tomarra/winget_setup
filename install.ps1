@@ -1,5 +1,5 @@
 $basicsIds = @(
-    "Microsoft.Edge"
+    "Microsoft.Edge",
     "Spotify.Spotify",
     "SlackTechnologies.Slack",
     "AgileBits.1Password",
