@@ -1,8 +1,9 @@
 $basicsIds = @(
     "Microsoft.Edge"
     "Spotify.Spotify",
-    "SlackTechnologies.Slack"
-    "AgileBits.1Password"
+    "SlackTechnologies.Slack",
+    "AgileBits.1Password",
+    "Telegram.TelegramDesktop"
 )
 
 $developmentToolsIds = @(
