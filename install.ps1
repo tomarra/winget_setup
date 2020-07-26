@@ -1,16 +1,21 @@
-# Basics
+$basicsIds = @(
+    "Microsoft.Edge"
+    "Spotify.Spotify",
+    "SlackTechnologies.Slack"
+)
 
-winget install --id Microsoft.Edge -e
+$developmentToolsIds = @(
+    "Microsoft.WindowsTerminal",
+    "Microsoft.VisualStudioCode",
+    "Git.Git"
+)
 
-# Development
+$gamesIds = @(
+    "Valve.Steam"
+)
 
-winget install --id Microsoft.VisualStudioCode -e
-winget install --id Git.Git -e
-winget install --id Microsoft.WindowsTerminal -e
+$masterIdList = $basicsIds + $developmentToolsIds + $gamesIds
 
-# Games
-
-# Other
-
-winget install --id Spotify.Spotify -e
-winget install --id SlackTechnologies.Slack -e
+foreach ($id in $masterIdList) {
+    winget install --id $id -e
+}
