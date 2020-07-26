@@ -13,7 +13,8 @@ $developmentToolsIds = @(
 )
 
 $gamesIds = @(
-    "Valve.Steam"
+    "Valve.Steam",
+    "Discord.Discord"
 )
 
 $masterIdList = $basicsIds + $developmentToolsIds + $gamesIds
